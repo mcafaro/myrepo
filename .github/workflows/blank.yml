@@ -20,7 +20,7 @@ jobs:
           wget -q https://ssd.mathworks.com/supportfiles/downloads/SupportPackageThirdParty/R2021bv2/arduinoide/glnxa64/MW_arduino-1.8.19-linux64_21b.tar.gz
           tar -xzf MW_arduino-1.8.19-linux64_21b.tar.gz -C ~/Documents/MATLAB/SupportPackages/R2023b/3P.instrset/arduinoide.instrset
           ls -R ~/Documents/MATLAB/SupportPackages/R2023b/3P.instrset/arduinoide.instrset
-          # ~/Documents/MATLAB/SupportPackages/R2023b/3P.instrset/arduinoide.instrset/arduino-1.8.19/hardware/tools/avr/bin/avr-gcc
+          ~/Documents/MATLAB/SupportPackages/R2023b/3P.instrset/arduinoide.instrset/arduino-1.8.19/hardware/tools/avr/bin/avr-gcc
       # - name: Run custom build procedure
       #   uses: matlab-actions/run-command@v2
       #   with:

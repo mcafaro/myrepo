@@ -9,16 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Set up MATLAB
-        uses: matlab-actions/setup-matlab@v2
-        with:
-          products: Simulink Simulink_Support_Package_for_Arduino_Hardware
+      # - name: Set up MATLAB
+      #   uses: matlab-actions/setup-matlab@v2
+      #   with:
+      #     products: Simulink Simulink_Support_Package_for_Arduino_Hardware
       - name: Manually install Arduino IDE
         run: |
           rm -rf ~/Documents/MATLAB/SupportPackages/R2023b/3P.instrset/arduinoide.instrset/arduino-1.8.19
           wget https://ssd.mathworks.com/supportfiles/downloads/SupportPackageThirdParty/R2021bv2/arduinoide/glnxa64/MW_arduino-1.8.19-linux64_21b.tar.gz
           tar -xzf MW_arduino-1.8.19-linux64_21b.tar.gz -C ~/Documents/MATLAB/SupportPackages/R2023b/3P.instrset/arduinoide.instrset
-      - name: Run custom build procedure
-        uses: matlab-actions/run-command@v2
-        with:
-          command: '/home/runner/Documents/MATLAB/SupportPackages/R2023b/3P.instrset/arduinoide.instrset/arduino-1.8.19/hardware/tools/avr/bin/avr-gcc'
+          /home/runner/Documents/MATLAB/SupportPackages/R2023b/3P.instrset/arduinoide.instrset/arduino-1.8.19/hardware/tools/avr/bin/avr-gcc
+      # - name: Run custom build procedure
+      #   uses: matlab-actions/run-command@v2
+      #   with:
+      #     command: '/home/runner/Documents/MATLAB/SupportPackages/R2023b/3P.instrset/arduinoide.instrset/arduino-1.8.19/hardware/tools/avr/bin/avr-gcc'

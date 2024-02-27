@@ -21,4 +21,4 @@ jobs:
       - name: Run custom build procedure
         uses: matlab-actions/run-command@v2
         with:
-          command: !avr-gcc
+          command: '!avr-gcc'

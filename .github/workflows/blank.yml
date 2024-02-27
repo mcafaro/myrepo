@@ -21,4 +21,4 @@ jobs:
       - name: Run custom build procedure
         uses: matlab-actions/run-command@v2
         with:
-          command: '!avr-gcc'
+          command: '/home/runner/Documents/MATLAB/SupportPackages/R2023b/3P.instrset/arduinoide.instrset/arduino-1.8.19/hardware/tools/avr/bin/avr-gcc'
